@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+	<title>Expanding Fauna Boxes</title>
+
+	<style>
+    body{
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+        border:0;
+        font-size:14px;
+        font-family:verdana,arial,sans-serif;
+        line-height:18px;
+        background:#24211c;
+    }
+    
+    /*
+    Text -----------------------------------------------*/
+    h1{color:#CCC;line-height:45px;margin:10px 25px;}
+    a:link,a:visited{color:#CCC;text-decoration:none;}
+    a:hover{color:#e5622a;text-decoration:underline;}
+	a:active{color:#FFF;text-decoration:underline;}
+    
+    /*
+    Expanding Boxes ------------------------------------*/
+	#expWrapper{
+		width:480px;
+		height:300px;
+		border:5px solid #333;
+		margin:50px auto;
+		position:relative;
+		background:#333;
+	}
+	#expBox1,
+	#expBox2,
+	#expBox3,
+	#expBox4{
+		width:112px;
+		height:296px;
+		margin:0 2px;
+		border:2px solid #000;
+	
+		z-index:0;
+		position:absolute;
+		display:inline-block;
+	
+		-webkit-transition: width .5s ease, margin .5s ease, z-index .6s ease .5s;
+		-moz-transition: width .5s ease, margin .5s ease, z-index .6s ease .5s;
+		-o-transition: width .5s ease, margin .5s ease, z-index .6s ease .5s;
+		transition: width .5s ease, margin .5s ease, z-index .6s ease .5s;
+	
+		border-radius:5px;
+		-moz-border-radius:5px;
+	}
+	#expBox1{
+		background:green;
+		margin-left:2px;
+	}
+	#expBox2{
+		background:yellow;
+		margin-left:122px;
+	}
+	#expBox3{
+		background:red;
+		margin-left:242px;
+	}
+	#expBox4{
+		background:blue;
+		margin-left:362px;
+	}
+		#expBox1:hover,
+		#expBox2:hover,
+		#expBox3:hover,
+		#expBox4:hover{
+			margin-left:2px;
+			width:472px;
+			z-index:50;
+			-webkit-transition: width .5s ease, margin .5s ease;
+			-moz-transition: width .5s ease, margin .5s ease;
+			-o-transition: width .5s ease, margin .5s ease;
+			transition: width .5s ease, margin .5s ease;
+		}
+	
+	</style>
+</head>
+
+<body>
+<h1>CSS3 Expandable Boxes</h1>
+	<div id="expWrapper">
+		<div id="expBox1">
+		BOX1
+		</div>
+		<div id="expBox2">
+		BOX2
+		</div>
+		<div id="expBox3">
+		BOX3
+		</div>
+		<div id="expBox4">
+		BOX4
+		</div>
+	</div>
+    <div style="width:100%;position:fixed;bottom:0;text-align:center;color:#CCC;font-size:11px;"><a href="http://crunchyweb.com" title="CrunchyWeb">By CrunchyWeb</a></div>
+</body>
+
+</html>
